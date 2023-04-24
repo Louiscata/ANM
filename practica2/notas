@@ -1,0 +1,7 @@
+para compilar: f95 -o archivo_ejecutable.out archivos_a_compilar.f95
+
+para cargar en un archivo: ./ejecutable.out <archivo_entrada> archivo_salida
+
+para compilar un modulo: f95 -c modulo.f95
+
+para usar un modulo: use modulo (se necesitan tener el .o y el .mod)
