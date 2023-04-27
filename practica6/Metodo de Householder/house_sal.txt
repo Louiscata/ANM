@@ -8,10 +8,14 @@
 
  Determinante:  -2.0000000000000004     
 
- Terminos independientes  -7.2732386183872730       -2.8460498941515411     
+ La matriz triangular superior R es:
+  -3.1622776601683795       -4.4271887242357320     
+   0.0000000000000000      -0.63245553203367599     
+
+ Termino independiente transformado:  -7.2732386183872730       -2.8460498941515411     
 
  Solucion:  -3.9999999999999987        4.4999999999999982     
 
  Residuo:   -1.7763568394002505E-015  -3.5527136788005009E-015
 
- Tiempo total de calculo:    1.31000299E-04
+ Tiempo total de calculo:    9.30000097E-05

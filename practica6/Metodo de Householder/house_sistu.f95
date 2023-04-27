@@ -31,8 +31,5 @@ subroutine house_sistu (n, a, b, u)
 	!	u(j) = u(j) / a(j, j)
 	!	u(1: j - 1) = u(1: j - 1) - a(1: j - 1, j) * u(j)
 	!end do
-	
-	print*
-	print*, 'Solucion:', u
 
 end subroutine

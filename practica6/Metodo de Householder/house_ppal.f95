@@ -8,7 +8,7 @@ program householder
 
 	implicit none
 	
-	integer :: n, i	
+	integer :: n, i, j
 	real (clreal) :: deter
 	real (clreal), allocatable :: a(:,:), aa(:,:), b(:), bb(:), u(:), r(:)
 	real :: start, finish
@@ -30,12 +30,32 @@ program householder
 	
 	call house_cal (n, a, b, deter)
 	
-	print*
-	print*,'Determinante:',deter
-	
 	call house_sistu (n, a, b, u)
 	
 	call house_residuo (n, n, aa, bb, u, r)
+	
+	print*
+	print*,'Determinante:',deter
+	
+	print*
+	print*,'La matriz triangular superior R es:'
+	do i = 1, n
+		do j = 1, n
+			if (i > j) then
+				a(i, j) = 0
+			end if
+		end do
+		print*, a(i, :)
+	end do
+	
+	print*
+	print*,'Termino independiente transformado:',b
+	
+	print*
+	print*, 'Solucion:', u
+	
+	print*
+	print*,'Residuo: ',r
 	
 	deallocate (a, aa, b, bb, u, r)
 	

@@ -14,8 +14,5 @@ subroutine house_residuo (m, n, a, b, u, r)
 	do i = 1, m
 		r(i) = dot_product(a(i, :), u) - b(i)
 	end do
-	
-	print*
-	print*,'Residuo: ',r
 
 end subroutine
