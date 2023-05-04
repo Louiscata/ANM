@@ -9,8 +9,8 @@ subroutine jacobi_cal (n, a, b, u, eps, nitmax)
 	integer, intent (in) :: n, nitmax
 	real (clreal), intent (in) :: a(n, n)
 	real (clreal), intent (in) :: b(n)
+	real (clreal), intent (inout) :: u(n)
 	real (clreal), intent (in) :: eps
-	real (clreal), intent (inout) :: u
 	
 	do i = 1, n
 		if (abs(a(i, i)) < 1.e-12) then

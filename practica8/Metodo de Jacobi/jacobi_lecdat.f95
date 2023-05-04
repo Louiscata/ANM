@@ -1,4 +1,4 @@
-subroutine jacob_lecdat	(n, a, b, u, eps, nitmax)
+subroutine jacobi_lecdat	(n, a, b, u, eps, nitmax)
 
 	use mod_clreal
 	
