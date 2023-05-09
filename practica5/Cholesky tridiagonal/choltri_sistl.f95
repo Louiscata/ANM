@@ -1,4 +1,4 @@
-subroutine chol_sistu (n, a, b, u)
+subroutine choltri_sistl (n, a, b, u)
 
 	use mod_clreal
 	
@@ -6,21 +6,14 @@ subroutine chol_sistu (n, a, b, u)
 	
 	integer :: i, j
 	integer, intent (in) :: n
-	real (kind = clreal) :: aux
 	real (kind = clreal), intent (in) :: a(n, n)
 	real (kind = clreal), intent (in) :: b(n)
 	real (kind = clreal), intent (out) :: u(n)
+	real (kind = clreal) :: aux
 	
-	u(n) = b(n) / a(n, n)
-	do i = n - 1, 1, -1
-		u(i) = b(i)
-		do j = i + 1, n
-			u(i) = u(i) - a(j, i) * u(j)
-		enddo
-		u(i) = u(i) / a(i, i)
+	b(1) = b(1) / dp(1)
+	do i = 2, n
+		b(i) = (b(i) - ds(i - 1) * b(i - 1)) / dp(i)
 	enddo
-	
-	print*
-	print*, 'Solucion:', u
 
 end subroutine
