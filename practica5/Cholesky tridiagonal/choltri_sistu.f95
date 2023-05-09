@@ -1,18 +1,16 @@
-subroutine choltri_sistu (n, a, b, u)
+subroutine choltri_sistu (n, dp, ds, b)
 
 	use mod_clreal
 	
 	implicit none
 	
-	integer :: i, j
+	integer :: i
 	integer, intent (in) :: n
-	real (kind = clreal) :: aux
-	real (kind = clreal), intent (in) :: a(n, n)
-	real (kind = clreal), intent (in) :: b(n)
-	real (kind = clreal), intent (out) :: u(n)
+	real (kind = clreal), intent (in) :: dp(n), ds(n - 1)
+	real (kind = clreal), intent (inout) :: b(n)
 	
 	b(n) = b(n) / dp(n)
-	do i = 1, n
+	do i = n - 1, 1, -1
 		b(i) = (b(i) - ds(i) * b(i + 1)) / dp(i)
 	enddo
 

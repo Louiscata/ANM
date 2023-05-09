@@ -8,8 +8,6 @@ subroutine choltri_lecdat	(n, dp, ds, b)
 	integer, intent (inout) :: n
 	real (kind = clreal), intent (out) :: dp(n), ds(n - 1), b(n)
 	
-	
-	
 	read*, dp
 	
 	print*
