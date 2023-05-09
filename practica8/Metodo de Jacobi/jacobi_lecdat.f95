@@ -43,10 +43,10 @@ subroutine jacobi_lecdat	(n, a, b, u, eps, nitmax)
 	
 	print*
 	print*, 'Epsilon:', eps
-	
+
 	read*,nitmax
 	
 	print*
-	print*, 'Numero maximo de iteraciones:', b
+	print*, 'Numero maximo de iteraciones:', nitmax
 
 end subroutine

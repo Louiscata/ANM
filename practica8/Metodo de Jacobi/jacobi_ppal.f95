@@ -7,8 +7,8 @@ program jacobi
 
 	implicit none
 	
-	integer :: n, i	
-	real (clreal) :: deter
+	integer :: n, i, nitmax
+	real (clreal) :: eps
 	real (clreal), allocatable :: a(:,:), b(:), u(:), r(:)
 	real :: start, finish
 	
@@ -16,18 +16,18 @@ program jacobi
 	
 	read*, n
 	print*, 'Tamanho de la matriz:',n
-	
-	allocate (a(n,n), b(n), u(n), r(n))
-	
-	!Lectura de datos
-	call jacobi_lecdat (n, a, b)
-	
+
 	if (n == 0) then
 		stop
 	end if
 	
+	allocate (a(n,n), b(n), u(n), r(n))
+	
+	!Lectura de datos
+	call jacobi_lecdat (n, a, b, u, eps, nitmax)
+	
 	!Calculo de la solucion
-	call jacobi_cal (n, a, b, deter)
+	call jacobi_cal (n, a, b, u, eps, nitmax)
 	
 	print*
 	print*,'Ultimo iterante calculado',u
