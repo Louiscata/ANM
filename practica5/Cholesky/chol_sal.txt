@@ -20,4 +20,4 @@
 
  Residuo:    0.0000000000000000        0.0000000000000000        0.0000000000000000     
 
- Tiempo total de calculo:    3.15000070E-04
+ Tiempo total de calculo:    1.24000013E-04

@@ -41,7 +41,7 @@ subroutine jacobi_cal (n, a, b, u, eps, nitmax)
 		
 		!error = maxval(abs(u - uold))
 		!error = sum(abs(u - uold))
-		error = sqrt(dot_product(abs(u - uold), abs(u - uold)))
+		error = sqrt(dot_product(abs(u - uold), abs(u - uold)))		!Norma 2
 		
 		if(error < eps) then
 			print*

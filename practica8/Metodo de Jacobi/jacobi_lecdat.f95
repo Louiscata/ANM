@@ -10,6 +10,7 @@ subroutine jacobi_lecdat	(n, a, b, u, eps, nitmax)
 	real (clreal), intent (out) :: a(n, n)
 	real (clreal), intent (out) :: b(n), u(n)
 	real (clreal), intent (out) :: eps
+	character(len=10)::formato='(100e12.4)'
 	
 	do i = 1, n
 		read*, a(i, :)
