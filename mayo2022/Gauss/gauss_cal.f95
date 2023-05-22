@@ -33,6 +33,11 @@ subroutine gauss_cal (n, a, b, deter)
 				b(i) = b(i) - factor * b(k)
 		end do
 		
+		print*,'Etapa',k
+			do i = 1, n
+			print*, a(i, :)
+		end do	
+		
 		!Metodo 2 para la eliminacion, mas rapido
 		!a (k + 1 : n, k) = a(k + 1 : n, k) / piv
 		!do j = k + 1, n

@@ -62,6 +62,16 @@ subroutine palu_cal (n, a, ip, deter)
 				a(ipi, j) = a(ipi, j) - a(ipi, k) * a(ipk, j)
 			end do
 		end do
+		
+		print*
+		print*, 'Etapa',k
+		print*
+		print*, 'Matriz permutada:'
+		do i = 1, n
+			print*, a(ip(i), :)
+		end do
+		print*
+		print*,'Permutacion de filas:',ip
 	end do
 	
 	!comprobacion de que el ultimo pivote no es nulo
@@ -84,5 +94,11 @@ subroutine palu_cal (n, a, ip, deter)
 	
 	print*
 	print*,'Permutación de filas',ip
+	
+	print*
+	print*, 'Matriz escalonada permutada:'
+	do i = 1, n
+		print*, a(ip(i), :)
+	end do
 	
 end subroutine

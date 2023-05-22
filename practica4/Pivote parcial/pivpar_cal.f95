@@ -64,6 +64,16 @@ subroutine pivpar_cal (n, a, b, ip, deter)
 			end do
 			b(ipi) = b(ipi) - a(ipi, k) * b(ipk)
 		end do
+		
+		print*
+		print*, 'Etapa',k
+		print*
+		print*, 'Matriz permutada:'
+		do i = 1, n
+			print*, a(ip(i), :)
+		end do
+		print*
+		print*,'Permutacion de filas:',ip
 	end do
 	
 	!comprobacion de que el ultimo pivote no es nulo
@@ -80,5 +90,14 @@ subroutine pivpar_cal (n, a, b, ip, deter)
 	
 	print*
 	print*,'Determinante:',deter
+	
+	print*
+	print*, 'Matriz escalonada permutada:'
+	do i = 1, n
+		print*, a(ip(i), :)
+	end do
+	
+	print*
+	print*,'Permutacion de filas:',ip
 	
 end subroutine

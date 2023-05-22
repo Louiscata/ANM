@@ -34,7 +34,7 @@ program sistu
 	print*,'Determinante:',deter
 	
 	print*
-	print*,'Matriz reducida (ojo con los factores de escalado, no estoy seguro de que se guarden bien):'
+	print*,'Matriz reducida (ojo con los factores de escalado, no estoy seguro del todo de que se guarden bien):'
 	do i = 1, n
 		print*, a(i, :)
 	end do

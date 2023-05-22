@@ -8,7 +8,7 @@ program palu
 
 	implicit none
 	
-	integer :: n	
+	integer :: n, i
 	real (kind = clreal) :: deter
 	integer, allocatable :: ip(:)
 	real (kind = clreal), allocatable :: a(:,:), aa(:,:), b(:), x(:), y(:), r(:)
